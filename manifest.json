@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"version": "1.0",
-	"name": "First-Extension",
+	"name": "CopyCatCoder",
 	"content_scripts": [
 		{
 			"matches": [
