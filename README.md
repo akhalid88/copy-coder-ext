@@ -1,6 +1,9 @@
-# First-Extension
+# Copy Stackoverflow
 
-This is my first extension. It will add a copy code button to code-blocks found on stackoverflows website
+## Description
+
+This is my first extension. Looking to get my feet wet with browser extensions. This extension adds a copy code button to code-blocks found on stackoverflows website
+![Icon](./assets/copy.png)
 
 -----------------------
 ## Technologies
