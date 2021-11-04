@@ -1,3 +1,4 @@
+//Target all code-blocks on page
 var arr = document.getElementsByClassName("s-code-block");
 
 for (var i = 0; i < arr.length; i++) {
@@ -24,3 +25,13 @@ for (var i = 0; i < arr.length; i++) {
 		btn.style.bottom = `${arr[i].scrollHeight - 50}px`
 	}
 }
+
+//Target all created buttons
+var button = document.querySelectorAll(".copy_code_button");
+//Copy functionality
+button.forEach((elem) => {
+	elem.addEventListener('click', (e) => {
+		navigator.clipboard.writeText(elem.parentNode.childNodes[0].innerText);
+		console.log("Copied to Clipboard");
+	})
+})
