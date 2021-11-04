@@ -1,11 +1,24 @@
 //Target all code-blocks on page
 var arr = document.getElementsByClassName("s-code-block");
 
+//Add font awesome link via JS
+var link = document.createElement('link');
+link.rel = "stylesheet";
+link.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+link.integrity = "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf";
+link.crossOrigin = "anonymous"
+document.head.appendChild(link);
+
 for (var i = 0; i < arr.length; i++) {
 	//Create button variable for insertion
 	var btn = document.createElement("button");
 	btn.classList.add("copy_code_button");
-	btn.appendChild(document.createTextNode("Copy"));
+	btn.appendChild(document.createTextNode("Copy "));
+
+	//Create font awesome icon and insert into button
+	var icon = document.createElement("i");
+	icon.classList.add("far", "fa-copy");
+	btn.appendChild(icon);
 	arr[i].appendChild(btn);
 
 	//Style button; position in upper right of code-block
