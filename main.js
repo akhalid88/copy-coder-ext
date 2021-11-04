@@ -7,19 +7,20 @@ for (var i = 0; i < arr.length; i++) {
 	btn.appendChild(document.createTextNode("Copy"));
 	arr[i].appendChild(btn);
 
-	//Style button
+	//Style button; position in upper right of code-block
 	btn.style.position = "relative";
 
+	if (arr[i].scrollWidth === arr[i].offsetWidth && arr[i].scrollHeight === arr[i].offsetHeight) {
+		btn.style.left = `${arr[i].offsetWidth - 70}px`;
+	} else if (arr[i].scrollWidth != arr[i].offsetWidth && arr[i].scrollHeight === arr[i].offsetWidth) {
+		btn.style.left = `${arr[i].offsetWidth - 200}px`;
+	} else {
+		btn.style.left = `${arr[i].offsetWidth - 150}px`
+	}
+
+	if (arr[i].scrollHeight === arr[i].offsetHeight) {
+		btn.style.bottom = `${arr[i].offsetHeight - 50}px`
+	} else {
+		btn.style.bottom = `${arr[i].scrollHeight - 50}px`
+	}
 }
-
-// console.log("The test extensions is up and running");
-
-// var images = document.getElementsByTagName('img');
-
-// for (elt of images) {
-// 	if (typeof browser === "undefined") {
-// 		var browser = chrome;
-// 	}
-// 	elt.src = `${browser.runtime.getURL("pp.jpg")}`
-// 	elt.alt = 'an alt text';
-// }
